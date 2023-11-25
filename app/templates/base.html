@@ -53,6 +53,7 @@
                         {# application content needs to be provided in the app_content block #}
                         {% block app_content %}{% endblock %}
                         <script src="{{url_for('static', filename='js/main.js')}}"></script>
+                        {{ moment.include_moment() }}
                     {% endblock %}
                 </div>
             </div>
