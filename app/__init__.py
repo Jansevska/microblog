@@ -48,5 +48,8 @@ if not app.debug:
     app.logger.info('Microblog startup')
 
 
+from app.api import bp as api_bp
+app.register_blueprint(api_bp, url_prefix='/api')
+
 
 from app import routes, models, errors
